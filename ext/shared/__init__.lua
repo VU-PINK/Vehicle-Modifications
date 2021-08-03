@@ -67,10 +67,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam1IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -103,10 +100,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam2IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -130,10 +124,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam3IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -156,10 +147,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam4IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -182,10 +170,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam5IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -208,10 +193,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam6IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -289,6 +271,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam1IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -321,6 +304,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam2IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -347,6 +331,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam3IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -369,6 +354,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam4IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -391,6 +377,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam5IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -413,6 +400,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam6IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -487,6 +475,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -519,6 +508,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -541,6 +531,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -563,6 +554,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -639,6 +631,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_VenomPGuid, m_VenomCam1IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -671,6 +664,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_VenomPGuid, m_VenomCam2IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -693,6 +687,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_VenomPGuid, m_VenomCam3IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -715,6 +710,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_VenomPGuid, m_VenomCam4IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -790,6 +786,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH6BirdPGuid, m_AH6BirdCam1IGuid, 
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -822,6 +819,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH6BirdPGuid, m_AH6BirdCam2IGuid, 
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -900,6 +898,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam1IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -932,6 +931,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam2IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -955,6 +955,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam3IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -977,6 +978,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam4IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
@@ -999,6 +1001,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam5IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.ignoreOwnerOrientation = g_Settings.ignoreOwnerOrientation
     end
 
     if s_MainCamera.cameraTransitionTime > 0 then
