@@ -15,7 +15,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28VehicleIGuid, fun
     s_VehicleEntityData.disabledDamageThreshold = s_VehicleEntityData.disabledDamageThreshold * g_Settings.disableThresholdMultiplier
     -- default preDestructionDamageThreshold: 300
     s_VehicleEntityData.preDestructionDamageThreshold = s_VehicleEntityData.preDestructionDamageThreshold * g_Settings.preDestructionThresholdMultiplier
-    
+
     --print('Changed MI28 Health')
 
 end)
@@ -75,6 +75,16 @@ end)
 
 ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam2IGuid, function(p_Instance)
 
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.heliRUCameraOffsetX, g_Settings.heliRUCameraOffsetY, g_Settings.heliRUCameraOffsetZ)
+    )
+
     local s_MainCamera = CameraComponentData(p_Instance)
     s_MainCamera:MakeWritable()
 
@@ -95,6 +105,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam3IGuid, functi
 
     local s_MainCamera = CameraComponentData(p_Instance)
     s_MainCamera:MakeWritable()
+
 
     -- default FieldOfView: 55
     if s_MainCamera.isFirstPerson == true then 
@@ -238,6 +249,16 @@ end)
 
 ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam2IGuid, function(p_Instance)
 
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.heliUSCameraOffsetX, g_Settings.heliUSCameraOffsetY, g_Settings.heliUSCameraOffsetZ)
+    )
+
     local s_MainCamera = CameraComponentData(p_Instance)
     s_MainCamera:MakeWritable()
 
@@ -252,17 +273,11 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam2IGuid, functi
 
     --print('Changed AH1Z  Cam 2')
 
-    local s_MainCameraComponent = ComponentData(p_Instance)
-    s_MainCameraComponent:MakeWritable()
-
-    s_MainCameraComponent.transform = LinearTransform(
-        Vec3(0,0,0),
-        Vec3(0,0,0),
-        Vec3(0,0,0),
-        Vec3(0,g_Settings.heliCameraOffsetHeight,g_Settings.heliCameraOffsetSideways)
-    )
-
 end)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam3IGuid, function(p_Instance)
 
@@ -333,6 +348,140 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam6IGuid, functi
     end
 
     --print('Changed AH1Z  Cam 6')
+
+end)
+
+
+-- KA60Kasatka | defaultHealth: 750 | 
+local m_KA60KasatkaPGuid = Guid('2C5892FC-37CB-4A4E-92E2-2DD7BAF08A5C')
+local m_KA60KasatkaVehicleIGuid = Guid('36A9A772-7F17-4140-88C6-5876C92D106A')
+-- Change Health
+ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaVehicleIGuid, function(p_Instance)
+
+    local s_VehicleEntityData = VehicleEntityData(p_Instance)
+    s_VehicleEntityData:MakeWritable()
+
+    -- default disabledDamageThreshold: 250
+    s_VehicleEntityData.disabledDamageThreshold = s_VehicleEntityData.disabledDamageThreshold * g_Settings.disableThresholdMultiplier
+    -- default preDestructionDamageThreshold: 300
+    s_VehicleEntityData.preDestructionDamageThreshold = s_VehicleEntityData.preDestructionDamageThreshold * g_Settings.preDestructionThresholdMultiplier
+    
+    --print('Changed KA60Kasatka Health')
+
+end)
+
+local m_KA60KasatkaACam1IGuid = Guid('FCD3E941-BDA2-41C1-B6DF-29107AADC56D')
+local m_KA60KasatkaACam2IGuid = Guid('60D9E011-1E15-4FCE-B861-CEEE8F68E37D')
+-- Change FOV
+-- A
+ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaACam1IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed KA60Kasatka A Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaACam2IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed KA60Kasatka A Cam 2')
+
+end)
+
+local m_KA60KasatkaCam1IGuid = Guid('E3650855-AC3F-4815-820B-7FBEB0C52C64')
+local m_KA60KasatkaCam2IGuid = Guid('D21CBB04-8F69-4DA4-8C78-96A34245807C')
+local m_KA60KasatkaCam3IGuid = Guid('9F47FC18-40A6-4B3D-920D-79B1E0FD4670')
+local m_KA60KasatkaCam4IGuid = Guid('6822F609-2DBC-4996-9C79-95D1AD2EB24E')
+-- 
+ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam1IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed KA60Kasatka  Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam2IGuid, function(p_Instance)
+
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.heliUSCameraOffsetX, g_Settings.heliUSCameraOffsetY, g_Settings.heliUSCameraOffsetZ)
+    )
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed KA60Kasatka  Cam 2')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam3IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed KA60Kasatka  Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam4IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed KA60Kasatka  Cam 4')
 
 end)
 
@@ -409,6 +558,16 @@ ResourceManager:RegisterInstanceLoadHandler(m_VenomPGuid, m_VenomCam1IGuid, func
 end)
 
 ResourceManager:RegisterInstanceLoadHandler(m_VenomPGuid, m_VenomCam2IGuid, function(p_Instance)
+
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.heliUSCameraOffsetX, g_Settings.heliUSCameraOffsetY, g_Settings.heliUSCameraOffsetZ)
+    )
 
     local s_MainCamera = CameraComponentData(p_Instance)
     s_MainCamera:MakeWritable()
@@ -535,6 +694,16 @@ end)
 
 ResourceManager:RegisterInstanceLoadHandler(m_AH6BirdPGuid, m_AH6BirdCam2IGuid, function(p_Instance)
 
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.scoutheliUSCameraOffsetX, g_Settings.scoutheliUSCameraOffsetY, g_Settings.scoutheliUSCameraOffsetZ)
+    )
+
     local s_MainCamera = CameraComponentData(p_Instance)
     s_MainCamera:MakeWritable()
 
@@ -627,6 +796,16 @@ end)
 
 ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam2IGuid, function(p_Instance)
 
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.scoutheliRUCameraOffsetX, g_Settings.scoutheliRUCameraOffsetY, g_Settings.scoutheliRUCameraOffsetZ)
+    )
+
     local s_MainCamera = CameraComponentData(p_Instance)
     s_MainCamera:MakeWritable()
 
@@ -638,6 +817,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam2IGuid, functi
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
+
 
     --print('Changed Z11W  Cam 2')
 
@@ -719,7 +899,7 @@ end)
 local m_T90ACam1IGuid = Guid('6BA00DB1-C4E1-4598-AD56-84CFBDC55FE6')
 local m_T90ACam2IGuid = Guid('C32EAF82-B036-44D0-B814-6AFE2003B5DE')
 local m_T90ACam3IGuid = Guid('C2D985B6-B3F4-49C0-AB9D-C7F1B48F573E')
-local m_T90ACam4IGuid = Guid('40614727-FEC7-49CE-B7F4-BE37307E08D7')
+local m_T90ACam4IGuid = Guid('977B24B4-DCE1-4163-8BD9-3A8C7C7E6431')
 -- Change FOV
 -- Alternate Cam
 ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90ACam1IGuid, function(p_Instance)
@@ -799,6 +979,17 @@ end)
 
 ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam2IGuid, function(p_Instance)
 
+
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.tanksCameraOffsetX, g_Settings.tanksCameraOffsetY, g_Settings.tanksCameraOffsetZ)
+    )
+
     local s_MainCamera = CameraComponentData(p_Instance)
     s_MainCamera:MakeWritable()
 
@@ -814,6 +1005,11 @@ ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam2IGuid, function
     --print('Changed T90 Cam 2')
 
 end)
+
+
+
+
+
 
 ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam3IGuid, function(p_Instance)
 
@@ -1006,6 +1202,16 @@ local m_M1Cam7IGuid = Guid('B06A096F-EECF-11DD-8117-9421284A74E5')
 -- Cam
 ResourceManager:RegisterInstanceLoadHandler(m_M1PGuid, m_M1Cam1IGuid, function(p_Instance)
 
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.tanksUSCameraOffsetX, g_Settings.tanksUSCameraOffsetY, g_Settings.tanksUSCameraOffsetZ)
+    )
+
     local s_MainCamera = CameraComponentData(p_Instance)
     s_MainCamera:MakeWritable()
 
@@ -1018,7 +1224,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_M1PGuid, m_M1Cam1IGuid, function(p
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    --print('Changed M1 Cam 1')
+    --print('Changed T90 Cam 2')
 
 end)
 
@@ -1130,3 +1336,793 @@ ResourceManager:RegisterInstanceLoadHandler(m_M1PGuid, m_M1Cam7IGuid, function(p
 
 end)
 
+
+-- LAV25 | defaultHealth: 1000 | 
+local m_LAV25PGuid = Guid('D124CDD4-FE2A-11DF-BB74-FD1A26B74EE5')
+local m_LAV25VehicleIGuid = Guid('0AA2C0B7-6B2C-76F5-B7CE-50276A615E3A')
+-- Change Health
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25VehicleIGuid, function(p_Instance)
+
+    local s_VehicleEntityData = VehicleEntityData(p_Instance)
+    s_VehicleEntityData:MakeWritable()
+
+    -- default disabledDamageThreshold: 500
+    s_VehicleEntityData.disabledDamageThreshold = s_VehicleEntityData.disabledDamageThreshold * g_Settings.disableThresholdMultiplier
+
+    --print('Changed LAV25 Health')
+
+end)
+
+local m_LAV25ACam1IGuid = Guid('1DBA97CA-120D-44BE-ACEE-47E1D3C4EA77')
+local m_LAV25ACam2IGuid = Guid('A99CF3B4-F605-421C-9371-E9DD925BD862')
+local m_LAV25ACam3IGuid = Guid('BB9FC4F8-865F-4592-B55A-8BD7D94764F0')
+local m_LAV25ACam4IGuid = Guid('977B24B4-DCE1-4163-8BD9-3A8C7C7E6431')
+-- Change FOV
+-- Alternate Cam
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25ACam1IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed LAV25 A Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25ACam2IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed LAV25 A Cam 2')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25ACam3IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed LAV25 A Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25ACam4IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed LAV25 A Cam 4')
+
+end)
+
+local m_LAV25Cam1IGuid = Guid('81D732C1-248B-4DB9-ACAE-33C18D05A776')
+local m_LAV25Cam2IGuid = Guid('B89FC6AF-9613-466F-954B-CCDBEBF119FA')
+local m_LAV25Cam3IGuid = Guid('DC19A628-223C-4909-BB1D-BD84EBB73D84')
+local m_LAV25Cam4IGuid = Guid('93F2E362-F9BD-4273-9416-3B94854B9C82')
+local m_LAV25Cam5IGuid = Guid('1749F020-114E-440F-8D7C-D9C4C8D94BBC')
+local m_LAV25Cam6IGuid = Guid('2AC6AAB2-0CF8-4559-AE6A-BE1B92C29216')
+local m_LAV25Cam7IGuid = Guid('CDEE01E8-9413-41F5-9EC8-8E760BD1E9E7')
+local m_LAV25Cam8IGuid = Guid('AFF3133D-EA3E-4DEC-9523-5EBBBCDF0DDE')
+-- Cam
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam1IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAV25 Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam2IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAV25 Cam 2')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam3IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAV25 Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam4IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAV25 Cam 4')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam5IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAV25 Cam 5')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam6IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAV25 Cam 6')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam7IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAV25 Cam 7')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam8IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAV25 Cam 7')
+
+end)
+
+
+-- BMP2 | defaultHealth: 1000 | 
+local m_BMP2PGuid = Guid('AAE95906-AFD4-11DD-84FB-9FA71F68ED5E')
+local m_BMP2VehicleIGuid = Guid('AAE95908-AFD4-11DD-84FB-9FA71F68ED5E')
+-- Change Health
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2VehicleIGuid, function(p_Instance)
+
+    local s_VehicleEntityData = VehicleEntityData(p_Instance)
+    s_VehicleEntityData:MakeWritable()
+
+    -- default disabledDamageThreshold: 500
+    s_VehicleEntityData.disabledDamageThreshold = s_VehicleEntityData.disabledDamageThreshold * g_Settings.disableThresholdMultiplier
+
+    --print('Changed BMP2 Health')
+
+end)
+
+local m_BMP2ACam1IGuid = Guid('2DA998FF-4736-41CC-98AB-DCA0500A6B1F')
+local m_BMP2ACam2IGuid = Guid('9FD97CF8-B530-4DA5-944D-845ECA37F41F')
+local m_BMP2ACam3IGuid = Guid('5D09F5C8-F5EC-47DD-AAF1-E7F416A7C2CE')
+local m_BMP2ACam4IGuid = Guid('42A07684-EA97-4B74-B45E-579346B1C404')
+-- Change FOV
+-- Alternate Cam
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2ACam1IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed BMP2 A Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2ACam2IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed BMP2 A Cam 2')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2ACam3IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed BMP2 A Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2ACam4IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed BMP2 A Cam 4')
+
+end)
+
+local m_BMP2Cam1IGuid = Guid('AB4AD033-28D4-4A06-9267-C57E7FA6886F')
+local m_BMP2Cam2IGuid = Guid('A259B406-5B63-4F4D-A857-D578CED2147E')
+local m_BMP2Cam3IGuid = Guid('F9F06FBC-2445-4571-8F8F-41444FD0F7F6')
+local m_BMP2Cam4IGuid = Guid('7735F6CF-DB3D-4257-B52F-569E902DE761')
+local m_BMP2Cam5IGuid = Guid('77C6975A-043E-46C4-BD59-F0E8E75559A0')
+local m_BMP2Cam6IGuid = Guid('82519964-FA33-4A43-812E-A34471A41F87')
+local m_BMP2Cam7IGuid = Guid('67090832-25D4-407F-96E0-D08F34157F38')
+local m_BMP2Cam8IGuid = Guid('70A65DFF-AD95-4849-9720-EB31BE5B63F7')
+-- Cam
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam1IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed BMP2 Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam2IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed BMP2 Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam3IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed BMP2 Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam4IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed BMP2 Cam 4')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam5IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed BMP2 Cam 5')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam6IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed BMP2 Cam 6')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam7IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed BMP2 Cam 7')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam8IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed BMP2 Cam 7')
+
+end)
+
+
+
+-- TUNGUSKA_M | defaultHealth: 1000 | 
+local m_TUNGUSKA_MPGuid = Guid('3DB73059-32BD-11E0-931D-8D7AAE81C8B7')
+local m_TUNGUSKA_MVehicleIGuid = Guid('AA668FE2-903B-62A9-13DB-6CA72BF63729')
+-- Change Health
+ResourceManager:RegisterInstanceLoadHandler(m_TUNGUSKA_MPGuid, m_TUNGUSKA_MVehicleIGuid, function(p_Instance)
+
+    local s_VehicleEntityData = VehicleEntityData(p_Instance)
+    s_VehicleEntityData:MakeWritable()
+
+    -- default disabledDamageThreshold: 500
+    s_VehicleEntityData.disabledDamageThreshold = s_VehicleEntityData.disabledDamageThreshold * g_Settings.disableThresholdMultiplier
+
+    --print('Changed TUNGUSKA_M Health')
+
+end)
+
+local m_TUNGUSKA_MACam1IGuid = Guid('F42BC0D5-BC94-4641-A857-94CC1FA829CB')
+local m_TUNGUSKA_MACam2IGuid = Guid('AF151443-70E2-4C83-B591-83488D251413')
+
+
+-- Change FOV
+-- Alternate Cam
+ResourceManager:RegisterInstanceLoadHandler(m_TUNGUSKA_MPGuid, m_TUNGUSKA_MACam1IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed TUNGUSKA_M A Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_TUNGUSKA_MPGuid, m_TUNGUSKA_MACam2IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed TUNGUSKA_M A Cam 2')
+
+end)
+
+
+local m_TUNGUSKA_MCam1IGuid = Guid('10A555CF-7251-40D8-8034-DA9DA5551549')
+local m_TUNGUSKA_MCam2IGuid = Guid('7BF62A99-92E0-40B1-895C-7B885F1100E6')
+local m_TUNGUSKA_MCam3IGuid = Guid('7A5A8913-56DA-4BF3-92E6-F4654BC113A1')
+local m_TUNGUSKA_MCam4IGuid = Guid('BAAD7BA6-2ADD-49E4-9634-956F8DB95933')
+
+-- Cam
+ResourceManager:RegisterInstanceLoadHandler(m_TUNGUSKA_MPGuid, m_TUNGUSKA_MCam1IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed TUNGUSKA_M Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_TUNGUSKA_MPGuid, m_TUNGUSKA_MCam2IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed TUNGUSKA_M Cam 2')
+
+end)
+
+
+ResourceManager:RegisterInstanceLoadHandler(m_TUNGUSKA_MPGuid, m_TUNGUSKA_MCam3IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed TUNGUSKA_M Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_TUNGUSKA_MPGuid, m_TUNGUSKA_MCam4IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed TUNGUSKA_M Cam 4')
+
+end)
+
+-- LAVAD | defaultHealth: 1000 | 
+local m_LAVADPGuid = Guid('0E23F40F-CDB3-4B9E-A36B-BD338CFA35BC')
+local m_LAVADVehicleIGuid = Guid('86A71B49-87A7-4A4D-B7E2-7C835B2F27C9')
+-- Change Health
+ResourceManager:RegisterInstanceLoadHandler(m_LAVADPGuid, m_LAVADVehicleIGuid, function(p_Instance)
+
+    local s_VehicleEntityData = VehicleEntityData(p_Instance)
+    s_VehicleEntityData:MakeWritable()
+
+    -- default disabledDamageThreshold: 500
+    s_VehicleEntityData.disabledDamageThreshold = s_VehicleEntityData.disabledDamageThreshold * g_Settings.disableThresholdMultiplier
+
+    --print('Changed LAVAD Health')
+
+end)
+
+local m_LAVADACam1IGuid = Guid('7EBEBEE4-C909-43DE-ACAA-700EABADA1AA')
+local m_LAVADACam2IGuid = Guid('0DE9C0E9-ACDF-4EEA-BEF7-2638CE80A323')
+
+
+-- Change FOV
+-- Alternate Cam
+ResourceManager:RegisterInstanceLoadHandler(m_LAVADPGuid, m_LAVADACam1IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed LAVAD A Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAVADPGuid, m_LAVADACam2IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed LAVAD A Cam 2')
+
+end)
+
+
+local m_LAVADCam1IGuid = Guid('AEF8ABFF-6510-441D-92D8-39B2F1138A82')
+local m_LAVADCam2IGuid = Guid('6F6D98BB-2943-4883-9438-230272AF1CA6')
+local m_LAVADCam3IGuid = Guid('2C21518F-5740-47FB-B755-BFE37A588C47')
+local m_LAVADCam4IGuid = Guid('5049CC3B-7005-4002-B880-F95ABCCF8106')
+
+-- Cam
+ResourceManager:RegisterInstanceLoadHandler(m_LAVADPGuid, m_LAVADCam1IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAVAD Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAVADPGuid, m_LAVADCam2IGuid, function(p_Instance)
+
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.tanksCameraOffsetX, g_Settings.tanksCameraOffsetY, g_Settings.tanksCameraOffsetZ)
+    )
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAVAD Cam 2')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAVADPGuid, m_LAVADCam3IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAVAD Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_LAVADPGuid, m_LAVADCam4IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed LAVAD Cam 4')
+
+end)
+
+--
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--JET
+
+
+-- F18F | defaultHealth: 500 | 
+local m_F18FPGuid = Guid('3EABB4EF-4003-11E0-8ACA-C41D37DB421C')
+local m_F18FVehicleIGuid = Guid('2B2DBFF0-8C2E-4931-C61C-11FA5803CCB2')
+-- Change Health
+ResourceManager:RegisterInstanceLoadHandler(m_F18FPGuid, m_F18FVehicleIGuid, function(p_Instance)
+
+    local s_VehicleEntityData = VehicleEntityData(p_Instance)
+    s_VehicleEntityData:MakeWritable()
+
+    -- default disabledDamageThreshold: 185
+    s_VehicleEntityData.disabledDamageThreshold = s_VehicleEntityData.disabledDamageThreshold * g_Settings.disableThresholdMultiplier
+
+    --print('Changed F18F Health')
+
+end)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- SU35BM | defaultHealth: 500 | 
+local m_SU35PGuid = Guid('76806015-4BE2-11E0-B502-9B84AFF94A89')
+local m_SU35VehicleIGuid = Guid('F2CD2BE1-4B72-59F0-A715-AA8E73F71751')
+-- Change Health
+ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35VehicleIGuid, function(p_Instance)
+
+    local s_VehicleEntityData = VehicleEntityData(p_Instance)
+    s_VehicleEntityData:MakeWritable()
+
+    -- default disabledDamageThreshold: 185
+    s_VehicleEntityData.disabledDamageThreshold = s_VehicleEntityData.disabledDamageThreshold * g_Settings.disableThresholdMultiplier
+
+    --print('Changed SU35 Health')
+
+end)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-- A10BM | defaultHealth: 500 | 
+local m_A10PGuid = Guid('D07E3830-85FD-4C0E-819E-23640D2B2ECB')
+local m_A10VehicleIGuid = Guid('46B31051-405C-40E0-A7F0-62283823CC7C')
+-- Change Health
+ResourceManager:RegisterInstanceLoadHandler(m_A10PGuid, m_A10VehicleIGuid, function(p_Instance)
+
+    local s_VehicleEntityData = VehicleEntityData(p_Instance)
+    s_VehicleEntityData:MakeWritable()
+
+    -- default disabledDamageThreshold: 185
+    s_VehicleEntityData.disabledDamageThreshold = s_VehicleEntityData.disabledDamageThreshold * g_Settings.disableThresholdMultiplier
+
+    --print('Changed A10 Health')
+
+end)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- SU25TM | defaultHealth: 500 | 
+local m_SU25TMPGuid = Guid('08D7A80F-BCB4-44FA-8DDF-AE65F096046D')
+local m_SU25TMVehicleIGuid = Guid('36EA7DA0-40C0-438F-98BB-31CBEA1E605F')
+-- Change Health
+ResourceManager:RegisterInstanceLoadHandler(m_SU25TMPGuid, m_SU25TMVehicleIGuid, function(p_Instance)
+
+    local s_VehicleEntityData = VehicleEntityData(p_Instance)
+    s_VehicleEntityData:MakeWritable()
+
+    -- default disabledDamageThreshold: 185
+    s_VehicleEntityData.disabledDamageThreshold = s_VehicleEntityData.disabledDamageThreshold * g_Settings.disableThresholdMultiplier
+
+    --print('Changed SU25TM Health')
+
+end)
