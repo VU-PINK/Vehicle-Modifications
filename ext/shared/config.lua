@@ -4,6 +4,7 @@ g_Settings = {
     fovMultiplierFirstPerson = 1.1,
     fovMultiplierThirdPerson = 1.50,
     cameraTransitionTime = 0,
+    freezeHeight = 0.1,
 
     fovMultiplierFirstPersonJet = 0.3,
     fovMultiplierThirdPersonJet = 1.20, --Jet fov feels higher to other vehicle suggested to have a bit lower.
