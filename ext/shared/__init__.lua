@@ -1,6 +1,6 @@
 require "__shared/config"
 
--- mod to change specific vehicle properties
+-- mod to change specific vehicle properties [yes this could be way more coded in a generic way but i was too lazy for this small mod]
 
 -- MI28 | defaultHealth: 500 | 
 local m_MI28PGuid = Guid('89BE53B6-2FF4-11DE-8C23-DAB1D69416DE')
