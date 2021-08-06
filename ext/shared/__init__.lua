@@ -15,7 +15,7 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28VehicleIGuid, fun
     s_VehicleEntityData.disabledDamageThreshold = s_VehicleEntityData.disabledDamageThreshold * g_Settings.disableThresholdMultiplier
     -- default preDestructionDamageThreshold: 300
     s_VehicleEntityData.preDestructionDamageThreshold = s_VehicleEntityData.preDestructionDamageThreshold * g_Settings.preDestructionThresholdMultiplier
-
+    
     --print('Changed MI28 Health')
 
 end)
@@ -67,11 +67,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam1IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed MI28  Cam 1')
@@ -100,11 +95,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam2IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed MI28  Cam 2')
@@ -124,11 +114,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam3IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed MI28  Cam 3')
@@ -147,11 +132,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam4IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed MI28  Cam 4')
@@ -170,11 +150,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam5IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed MI28  Cam 5')
@@ -193,11 +168,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_MI28PGuid, m_MI28Cam6IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed MI28  Cam 6')
@@ -271,11 +241,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam1IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed AH1Z  Cam 1')
@@ -304,11 +269,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam2IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed AH1Z  Cam 2')
@@ -331,11 +291,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam3IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed AH1Z  Cam 3')
@@ -354,11 +309,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam4IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed AH1Z  Cam 4')
@@ -377,11 +327,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam5IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed AH1Z  Cam 5')
@@ -400,11 +345,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH1ZPGuid, m_AH1ZCam6IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed AH1Z  Cam 6')
@@ -475,11 +415,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed KA60Kasatka  Cam 1')
@@ -508,11 +443,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed KA60Kasatka  Cam 2')
@@ -531,11 +461,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed KA60Kasatka  Cam 3')
@@ -554,11 +479,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_KA60KasatkaPGuid, m_KA60KasatkaCam
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed KA60Kasatka  Cam 4')
@@ -631,11 +551,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_VenomPGuid, m_VenomCam1IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed Venom  Cam 1')
@@ -664,11 +579,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_VenomPGuid, m_VenomCam2IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed Venom  Cam 2')
@@ -687,11 +597,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_VenomPGuid, m_VenomCam3IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed Venom  Cam 3')
@@ -710,11 +615,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_VenomPGuid, m_VenomCam4IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed Venom  Cam 4')
@@ -786,11 +686,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH6BirdPGuid, m_AH6BirdCam1IGuid, 
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed AH6Bird  Cam 1')
@@ -819,11 +714,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_AH6BirdPGuid, m_AH6BirdCam2IGuid, 
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed AH6Bird  Cam 2')
@@ -898,11 +788,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam1IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed Z11W  Cam 1')
@@ -931,11 +816,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam2IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
 
@@ -955,11 +835,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam3IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed Z11W  Cam 3')
@@ -978,11 +853,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam4IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed Z11W  Cam 4')
@@ -1001,11 +871,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_Z11WPGuid, m_Z11WCam5IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.freezeHeight = g_Settings.freezeHeight
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed Z11W  Cam 5')
@@ -1108,10 +973,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam1IGuid, function
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed T90 Cam 1')
 
 end)
@@ -1122,12 +983,12 @@ ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam2IGuid, function
     local s_MainCameraComponent = ComponentData(p_Instance)
     s_MainCameraComponent:MakeWritable()
 
-    s_MainCameraComponent.transform = LinearTransform(
-        Vec3(1,0,0),
-        Vec3(0,1,0),
-        Vec3(0,0,1),
-        Vec3(g_Settings.tanksCameraOffsetX, g_Settings.tanksCameraOffsetY, g_Settings.tanksCameraOffsetZ)
-    )
+  --  s_MainCameraComponent.transform = LinearTransform(
+   --     Vec3(1,0,0),
+   --     Vec3(0,1,0),
+   --     Vec3(0,0,1),
+   --     Vec3(g_Settings.tanksCameraOffsetX, g_Settings.tanksCameraOffsetY, g_Settings.tanksCameraOffsetZ)
+    --)
 
     local s_MainCamera = CameraComponentData(p_Instance)
     s_MainCamera:MakeWritable()
@@ -1141,14 +1002,9 @@ ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam2IGuid, function
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed T90 Cam 2')
 
 end)
-
 
 
 
@@ -1166,10 +1022,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam3IGuid, function
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed T90 Cam 3')
@@ -1190,10 +1042,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam4IGuid, function
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed T90 Cam 4')
 
 end)
@@ -1210,10 +1058,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam5IGuid, function
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed T90 Cam 5')
@@ -1234,10 +1078,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam6IGuid, function
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed T90 Cam 6')
 
 end)
@@ -1256,10 +1096,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam7IGuid, function
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed T90 Cam 7')
 
 end)
@@ -1276,10 +1112,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_T90PGuid, m_T90Cam8IGuid, function
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed T90 Cam 7')
@@ -1391,10 +1223,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_M1PGuid, m_M1Cam1IGuid, function(p
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed T90 Cam 2')
 
 end)
@@ -1411,10 +1239,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_M1PGuid, m_M1Cam2IGuid, function(p
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed M1 Cam 2')
@@ -1435,10 +1259,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_M1PGuid, m_M1Cam3IGuid, function(p
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed M1 Cam 3')
 
 end)
@@ -1455,10 +1275,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_M1PGuid, m_M1Cam4IGuid, function(p
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed M1 Cam 4')
@@ -1479,10 +1295,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_M1PGuid, m_M1Cam5IGuid, function(p
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed M1 Cam 5')
 
 end)
@@ -1501,10 +1313,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_M1PGuid, m_M1Cam6IGuid, function(p
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed M1 Cam 6')
 
 end)
@@ -1521,10 +1329,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_M1PGuid, m_M1Cam7IGuid, function(p
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed M1 Cam 7')
@@ -1625,10 +1429,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam1IGuid, func
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed LAV25 Cam 1')
 
 end)
@@ -1645,10 +1445,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam2IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed LAV25 Cam 2')
@@ -1669,10 +1465,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam3IGuid, func
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed LAV25 Cam 3')
 
 end)
@@ -1689,10 +1481,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam4IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed LAV25 Cam 4')
@@ -1713,10 +1501,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam5IGuid, func
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed LAV25 Cam 5')
 
 end)
@@ -1733,10 +1517,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam6IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed LAV25 Cam 6')
@@ -1757,10 +1537,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam7IGuid, func
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed LAV25 Cam 7')
 
 end)
@@ -1777,10 +1553,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAV25PGuid, m_LAV25Cam8IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed LAV25 Cam 7')
@@ -1881,10 +1653,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam1IGuid, functi
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed BMP2 Cam 1')
 
 end)
@@ -1901,10 +1669,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam2IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed BMP2 Cam 3')
@@ -1925,10 +1689,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam3IGuid, functi
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed BMP2 Cam 3')
 
 end)
@@ -1945,10 +1705,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam4IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed BMP2 Cam 4')
@@ -1969,10 +1725,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam5IGuid, functi
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed BMP2 Cam 5')
 
 end)
@@ -1989,10 +1741,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam6IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed BMP2 Cam 6')
@@ -2013,10 +1761,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam7IGuid, functi
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed BMP2 Cam 7')
 
 end)
@@ -2033,10 +1777,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_BMP2PGuid, m_BMP2Cam8IGuid, functi
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed BMP2 Cam 7')
@@ -2112,10 +1852,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_TUNGUSKA_MPGuid, m_TUNGUSKA_MCam1I
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed TUNGUSKA_M Cam 1')
 
 end)
@@ -2132,10 +1868,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_TUNGUSKA_MPGuid, m_TUNGUSKA_MCam2I
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed TUNGUSKA_M Cam 2')
@@ -2157,10 +1889,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_TUNGUSKA_MPGuid, m_TUNGUSKA_MCam3I
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed TUNGUSKA_M Cam 3')
 
 end)
@@ -2177,10 +1905,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_TUNGUSKA_MPGuid, m_TUNGUSKA_MCam4I
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed TUNGUSKA_M Cam 4')
@@ -2254,10 +1978,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAVADPGuid, m_LAVADCam1IGuid, func
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed LAVAD Cam 1')
 
 end)
@@ -2286,10 +2006,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAVADPGuid, m_LAVADCam2IGuid, func
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed LAVAD Cam 2')
 
 end)
@@ -2308,10 +2024,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAVADPGuid, m_LAVADCam3IGuid, func
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
     end
 
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
-    end
-
     --print('Changed LAVAD Cam 3')
 
 end)
@@ -2328,10 +2040,6 @@ ResourceManager:RegisterInstanceLoadHandler(m_LAVADPGuid, m_LAVADCam4IGuid, func
     else 
         s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
-    if s_MainCamera.cameraTransitionTime > 0 then
-        s_MainCamera.cameraTransitionTime = g_Settings.cameraTransitionTime
     end
 
     --print('Changed LAVAD Cam 4')
@@ -2360,6 +2068,115 @@ ResourceManager:RegisterInstanceLoadHandler(m_F18FPGuid, m_F18FVehicleIGuid, fun
 
 end)
 
+local m_F18FACam1IGuid = Guid('86D8EACB-8637-4BFB-AD0D-9A905DDF812A')
+
+
+-- Change FOV
+-- Alternate Cam
+ResourceManager:RegisterInstanceLoadHandler(m_F18FPGuid, m_F18FACam1IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed F18F A Cam 1')
+
+end)
+
+
+local m_F18FCam1IGuid = Guid('D7A2D4BF-994B-43E7-AC1B-BBAD5F0C619F')
+local m_F18FCam2IGuid = Guid('18C8BE39-0026-4FDC-AA74-2D96767E312C')
+local m_F18FCam3IGuid = Guid('704D8081-69FE-4E32-AD8D-EEAA7D66A405')
+local m_F18FCam4IGuid = Guid('3B457C39-7BCF-4258-A347-618F338A6D20')
+
+-- Cam
+ResourceManager:RegisterInstanceLoadHandler(m_F18FPGuid, m_F18FCam1IGuid, function(p_Instance)
+
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed F18F Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_F18FPGuid, m_F18FCam2IGuid, function(p_Instance)
+
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.jetCameraOffsetX, g_Settings.jetUSCameraOffsetY, g_Settings.jetCameraOffsetZ)
+    )
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+    end
+
+    --print('Changed F18F Cam 2')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_F18FPGuid, m_F18FCam3IGuid, function(p_Instance)
+
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed F18F Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_F18FPGuid, m_F18FCam4IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed F18F Cam 4')
+
+end)
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- SU35BM | defaultHealth: 500 | 
@@ -2378,6 +2195,108 @@ ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35VehicleIGuid, fun
 
 end)
 
+
+local m_SU35ACam1IGuid = Guid('1B7C8CCB-1536-42ED-A469-47239C04CA6E')
+
+
+-- Change FOV
+-- Alternate Cam
+ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35ACam1IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed SU35 A Cam 1')
+
+end)
+
+
+local m_SU35Cam1IGuid = Guid('1EAF89C5-744B-4D41-ACB6-691F493DCD2F')
+local m_SU35Cam2IGuid = Guid('42ECE6D2-B656-4A8B-805E-FE54B5D8639D')
+local m_SU35Cam3IGuid = Guid('74F2DCD8-AA04-4E02-BFE1-B4BB9BBE417E')
+local m_SU35Cam4IGuid = Guid('83E8D662-FD7A-4FF5-852E-ECB0CBD87073')
+
+-- Cam
+ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35Cam1IGuid, function(p_Instance)
+
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed SU35 Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35Cam2IGuid, function(p_Instance)
+
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+    end
+
+    --print('Changed SU35 Cam 2')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35Cam3IGuid, function(p_Instance)
+
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed SU35 Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35Cam4IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed SU35 Cam 4')
+
+end)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -2400,6 +2319,115 @@ ResourceManager:RegisterInstanceLoadHandler(m_A10PGuid, m_A10VehicleIGuid, funct
 end)
 
 
+local m_A10ACam1IGuid = Guid('012E8729-5030-4AA7-8ACA-B694D8438E18')
+
+
+-- Change FOV
+-- Alternate Cam
+ResourceManager:RegisterInstanceLoadHandler(m_A10PGuid, m_A10ACam1IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed A10 A Cam 1')
+
+end)
+
+
+local m_A10Cam1IGuid = Guid('FF2FD7A9-7981-463A-B0F9-EE368853AA4D')
+local m_A10Cam2IGuid = Guid('D035CB54-9C4D-4371-AF6A-327731076041')
+local m_A10Cam3IGuid = Guid('3B6F8A5A-13FA-484B-BBE7-ACF2D3082590')
+local m_A10Cam4IGuid = Guid('D3C752DD-A64B-435A-B62D-F21E56D60419')
+
+-- Cam
+ResourceManager:RegisterInstanceLoadHandler(m_A10PGuid, m_A10Cam1IGuid, function(p_Instance)
+
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed A10 Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_A10PGuid, m_A10Cam2IGuid, function(p_Instance)
+
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.jetCameraOffsetX, g_Settings.jetUSCameraOffsetY, g_Settings.jetCameraOffsetZ)
+    )
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+    end
+
+    --print('Changed A10 Cam 2')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_A10PGuid, m_A10Cam3IGuid, function(p_Instance)
+
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed A10 Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_A10PGuid, m_A10Cam4IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed A10 Cam 4')
+
+end)
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- SU25TM | defaultHealth: 500 | 
@@ -2417,3 +2445,114 @@ ResourceManager:RegisterInstanceLoadHandler(m_SU25TMPGuid, m_SU25TMVehicleIGuid,
     --print('Changed SU25TM Health')
 
 end)
+
+local m_SU25TMACam1IGuid = Guid('29CDFDAA-14E0-40A5-B247-036BF7E6D170')
+
+
+-- Change FOV
+-- Alternate Cam
+ResourceManager:RegisterInstanceLoadHandler(m_SU25TMPGuid, m_SU25TMACam1IGuid, function(p_Instance)
+
+    local s_AlternateCamera = AlternateCameraViewData(p_Instance)
+    s_AlternateCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    s_AlternateCamera.fieldOfView = s_AlternateCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+
+    --print('Changed SU25TM A Cam 1')
+
+end)
+
+
+local m_SU25TMCam1IGuid = Guid('F06A05AC-3D4B-4A26-8581-60E065CBEE70')
+local m_SU25TMCam2IGuid = Guid('EE56D773-BD30-472F-99E5-AD8733747777')
+local m_SU25TMCam3IGuid = Guid('0F7018A9-C517-4D32-9D19-328731AE0D25')
+local m_SU25TMCam4IGuid = Guid('5FE90393-066E-4A6E-8CA6-644F7088B227')
+
+-- Cam
+ResourceManager:RegisterInstanceLoadHandler(m_SU25TMPGuid, m_SU25TMCam1IGuid, function(p_Instance)
+
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed SU25TM Cam 1')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_SU25TMPGuid, m_SU25TMCam2IGuid, function(p_Instance)
+
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.jetCameraOffsetX, g_Settings.jetUSCameraOffsetY, g_Settings.jetCameraOffsetZ)
+    )
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+    end
+
+    --print('Changed SU25TM Cam 2')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_SU25TMPGuid, m_SU25TMCam3IGuid, function(p_Instance)
+
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed SU25TM Cam 3')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_SU25TMPGuid, m_SU25TMCam4IGuid, function(p_Instance)
+
+    local s_MainCamera = CameraComponentData(p_Instance)
+    s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    if s_MainCamera.isFirstPerson == true then 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    else 
+        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    end
+
+    --print('Changed SU25TM Cam 4')
+
+end)
+
+

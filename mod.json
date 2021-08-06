@@ -1,6 +1,6 @@
 {
-	"Name": "Vehicle Modifications",
-	"Authors": ["IllustrisJack", "Gemini899"],
+	"Name": "VehicleModifications",
+	"Authors": ["IllustrisJack"],
 	"Description": "Changes Specific Vehicle Properties",
 	"Version": "0.1.0",
 	"HasWebUI": false,
