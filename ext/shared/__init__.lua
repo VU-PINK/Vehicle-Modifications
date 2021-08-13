@@ -1,6 +1,6 @@
 require "__shared/config"
 
--- mod to change specific vehicle properties [yes this could be way more coded in a generic way but i was too lazy for this small mod]
+-- mod to change specific vehicle properties
 
 -- MI28 | defaultHealth: 500 | 
 local m_MI28PGuid = Guid('89BE53B6-2FF4-11DE-8C23-DAB1D69416DE')
@@ -2223,17 +2223,17 @@ local m_SU35Cam4IGuid = Guid('83E8D662-FD7A-4FF5-852E-ECB0CBD87073')
 ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35Cam1IGuid, function(p_Instance)
 
 
-    local s_MainCamera = CameraComponentData(p_Instance)
-    s_MainCamera:MakeWritable()
+    --local s_MainCamera = CameraComponentData(p_Instance)
+    --s_MainCamera:MakeWritable()
 
     -- default FieldOfView: 55
-    if s_MainCamera.isFirstPerson == true then 
-        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
-        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
-    else 
-        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
+    --if s_MainCamera.isFirstPerson == true then 
+        --s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
+        --s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
+    --else 
+        --s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
+        --s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
+    --end
 
     --print('Changed SU35 Cam 1')
 
@@ -2244,6 +2244,35 @@ ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35Cam2IGuid, functi
     local s_MainCameraComponent = ComponentData(p_Instance)
     s_MainCameraComponent:MakeWritable()
 
+
+    --local s_MainCamera = CameraComponentData(p_Instance)
+    --s_MainCamera:MakeWritable()
+
+    -- default FieldOfView: 55
+    --if s_MainCamera.isFirstPerson == true then 
+        --s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+        --s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+    --else 
+        --s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+        --s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+    --end
+
+    --print('Changed SU35 Cam 2')
+
+end)
+
+ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35Cam3IGuid, function(p_Instance)
+
+    local s_MainCameraComponent = ComponentData(p_Instance)
+    s_MainCameraComponent:MakeWritable()
+
+
+    s_MainCameraComponent.transform = LinearTransform(
+        Vec3(1,0,0),
+        Vec3(0,1,0),
+        Vec3(0,0,1),
+        Vec3(g_Settings.jetCameraOffsetX, g_Settings.jetUSCameraOffsetY, g_Settings.jetCameraOffsetZ)
+    )
 
     local s_MainCamera = CameraComponentData(p_Instance)
     s_MainCamera:MakeWritable()
@@ -2257,42 +2286,24 @@ ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35Cam2IGuid, functi
         s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
     end
 
-    --print('Changed SU35 Cam 2')
-
-end)
-
-ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35Cam3IGuid, function(p_Instance)
-
-
-    local s_MainCamera = CameraComponentData(p_Instance)
-    s_MainCamera:MakeWritable()
-
-    -- default FieldOfView: 55
-    if s_MainCamera.isFirstPerson == true then 
-        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
-        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
-    else 
-        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
-
     --print('Changed SU35 Cam 3')
 
 end)
 
 ResourceManager:RegisterInstanceLoadHandler(m_SU35PGuid, m_SU35Cam4IGuid, function(p_Instance)
 
-    local s_MainCamera = CameraComponentData(p_Instance)
-    s_MainCamera:MakeWritable()
+
+    --local s_MainCamera = CameraComponentData(p_Instance)
+    --s_MainCamera:MakeWritable()
 
     -- default FieldOfView: 55
-    if s_MainCamera.isFirstPerson == true then 
-        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPerson
-        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPerson
-    else 
-        s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPerson
-        s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPerson
-    end
+    --if s_MainCamera.isFirstPerson == true then 
+        --s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+        --s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierFirstPersonJet
+    --else 
+        --s_MainCamera.fieldOfView = s_MainCamera.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+        --s_MainCamera.regularView.fieldOfView = s_MainCamera.regularView.fieldOfView * g_Settings.fovMultiplierThirdPersonJet
+    --end
 
     --print('Changed SU35 Cam 4')
 

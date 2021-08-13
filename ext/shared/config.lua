@@ -5,7 +5,7 @@ g_Settings = {
     fovMultiplierThirdPerson = 1.50,
 
     fovMultiplierFirstPersonJet = 1.1,
-    fovMultiplierThirdPersonJet = 1.10, --Jet fov feels higher to other vehicle suggested to have a bit lower.
+    fovMultiplierThirdPersonJet = 1.20, --Jet fov feels higher to other vehicle suggested to have a bit lower.
 
 
     heliUSCameraOffsetX = -2.6,
@@ -30,15 +30,15 @@ g_Settings = {
 
     tanksCameraOffsetX = 0,
     tanksCameraOffsetY = 0,
-    tanksCameraOffsetZ = -4.5,
+    tanksCameraOffsetZ = -4.0,
 
     tanksUSCameraOffsetX = 0,
     tanksUSCameraOffsetY = 0,
-    tanksUSCameraOffsetZ = -2.0, --M1 Ambrams is a bit bugged and needs lower DEPTH.
+    tanksUSCameraOffsetZ = -1.8, --M1 Ambrams is a bit bugged and needs lower DEPTH.
 
     jetCameraOffsetX = 0,
     jetUSCameraOffsetY = 0,
-    jetCameraOffsetZ = -5.5 --
+    jetCameraOffsetZ = -6.5 --
 
     -- X ORIZONTAL Y VERTICAL Z DEPTH
 }
